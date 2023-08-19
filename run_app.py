@@ -139,7 +139,7 @@ def main():
     #Image Recognition Header and info
     st.sidebar.markdown(
         """
-        <div style='text-align: center; background-color: White; padding: 10px;'>
+        <div class="centered-heading", style='text-align: center; background-color: White; padding: 10px;'>
             <h1>Auto Recognition</h1>
         </div>
         """,
@@ -188,7 +188,7 @@ def main():
     #Create input fields for user to enter car features
     st.markdown(
         """
-        <div style='text-align: center; background-color: #f0f0f0; padding: 5px;'>
+        <div class="centered-heading", style='text-align: center; background-color: #f0f0f0; padding: 5px;'>
             <h1>Price Prediction</h1>
             <h1>Enter Vehicle Features:</h1>
         </div>
