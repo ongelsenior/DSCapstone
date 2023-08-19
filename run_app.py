@@ -75,7 +75,7 @@ def main():
     #Create the HTML banner with styling
     html_banner = """
     <div style="position: fixed; top: 0; left: 0; width: 100%; background-color: lightblue; padding-top: 45px; color: white;z-index: 999;">
-        <p style="text-align: right; margin: 0;">Todays Date Is: {}  ||  The Time Is Currently : {}  ||  Exchange Rate Between USD and JMD: 155.156 JMD to 1 USD  ||  This Is Rate of Conversion Used In The Price Prediction Application </p>
+        <p style="text-align: right; margin: 0;">Todays Date Is: {}  ||  The Time Is Currently : {}  ||  Exchange Rate JMD:156 to 1 USD || </p>
     </div>
     
     """.format(formatted_date, formatted_time)
