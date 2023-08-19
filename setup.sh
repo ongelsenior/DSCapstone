@@ -8,3 +8,8 @@ echo "\
 headless = true\n\
 port = $PORT\n\
 " > ~/.streamlit/config.toml
+
+pip install -r requirements.txt
+
+chmod +x setup.sh
+
