@@ -88,15 +88,39 @@ def main():
     #Display the banner using the st.markdown function
     st.markdown(html_banner, unsafe_allow_html=True)
 
-    #Centered heading with background color
-    st.markdown(
-        """
-        <div style='text-align: center; background-color: #f0f0f0; padding: 10px;'>
-            <h1>Auto Price Prediction and Recognition Application</h1>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+ css = """
+<style>
+    :root {
+        --bg-color-light: #f0f0f0;
+        --bg-color-dark: #1a1a1a;
+    }
+
+    .centered-heading {
+        text-align: center;
+        padding: 10px;
+        background-color: var(--bg-color-light);
+        transition: background-color 0.3s ease;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .centered-heading {
+            background-color: var(--bg-color-dark);
+        }
+    }
+</style>
+"""
+
+st.markdown(css, unsafe_allow_html=True)
+
+# Display the centered heading
+st.markdown(
+    """
+    <div class="centered-heading">
+        <h1>Auto Price Prediction and Recognition Application</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
     
     #Path to your local image file
     image_path = "a.jpg"
