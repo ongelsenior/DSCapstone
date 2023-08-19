@@ -1,6 +1,8 @@
 import warnings
+from sklearn.exceptions import InconsistentVersionWarning
+import sklearn  # Import sklearn after filtering warnings
+
 warnings.filterwarnings("ignore", category=InconsistentVersionWarning)
-import sklearn
 import streamlit as st
 import pandas as pd
 from PIL import Image
