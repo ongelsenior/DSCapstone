@@ -110,17 +110,17 @@ def main():
     </style>
     """
 
-st.markdown(css, unsafe_allow_html=True)
-
-# Display the centered heading
-st.markdown(
-    """
-    <div class="centered-heading">
-        <h1>Auto Price Prediction and Recognition Application</h1>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+    st.markdown(css, unsafe_allow_html=True)
+    
+    # Display the centered heading
+    st.markdown(
+        """
+        <div class="centered-heading">
+            <h1>Auto Price Prediction and Recognition Application</h1>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
     
     #Path to your local image file
     image_path = "a.jpg"
