@@ -88,27 +88,27 @@ def main():
     #Display the banner using the st.markdown function
     st.markdown(html_banner, unsafe_allow_html=True)
 
- css = """
-<style>
-    :root {
-        --bg-color-light: #f0f0f0;
-        --bg-color-dark: #1a1a1a;
-    }
-
-    .centered-heading {
-        text-align: center;
-        padding: 10px;
-        background-color: var(--bg-color-light);
-        transition: background-color 0.3s ease;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        .centered-heading {
-            background-color: var(--bg-color-dark);
+    css = """
+    <style>
+        :root {
+            --bg-color-light: #f0f0f0;
+            --bg-color-dark: #1a1a1a;
         }
-    }
-</style>
-"""
+    
+        .centered-heading {
+            text-align: center;
+            padding: 10px;
+            background-color: var(--bg-color-light);
+            transition: background-color 0.3s ease;
+        }
+    
+        @media (prefers-color-scheme: dark) {
+            .centered-heading {
+                background-color: var(--bg-color-dark);
+            }
+        }
+    </style>
+    """
 
 st.markdown(css, unsafe_allow_html=True)
 
