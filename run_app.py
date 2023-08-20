@@ -42,7 +42,7 @@ scalers = streamlit_load_scalers()
 image_model1 = load_model('Virage_Odyssey_model.h5')
 image_model2 = load_model('s4_ram_model.h5')
 image_model3 = load_model('range_c30_model.h5')
-image_models = [image_model1 , image_model2, image_model3] 
+image_models = [image_model1,image_model2,image_model3] 
 
 
 label_mappings1 = np.load('Virage_Odyssey_model_label_mappings.npy', allow_pickle=True).tolist()
@@ -80,7 +80,7 @@ def main():
     #Create the HTML banner with styling
     html_banner = """
     <div style="position: fixed; top: 0; left: 0; width: 100%; background-color: lightblue; padding-top: 45px; color: white;z-index: 999;">
-        <p style="text-align: right; margin: 0;">Todays Date Is: {}  ||  The Time Is Currently : {}  ||  Exchange Rate JMD:156 to 1 USD || </p>
+        <p style="text-align: right; margin: 0;">Todays Date Is: {}  ||  The Time Is Currently : {}  ||  Exchange Rate Between USD and JMD: 155.156 JMD to 1 USD  ||</p>
     </div>
     
     """.format(formatted_date, formatted_time)
@@ -88,34 +88,10 @@ def main():
     #Display the banner using the st.markdown function
     st.markdown(html_banner, unsafe_allow_html=True)
 
-    css = """
-    <style>
-        :root {
-            --bg-color-light: #f0f0f0;
-            --bg-color-dark: #1a1a1a;
-        }
-    
-        .centered-heading {
-            text-align: center;
-            padding: 10px;
-            background-color: var(--bg-color-light);
-            transition: background-color 0.3s ease;
-        }
-    
-        @media (prefers-color-scheme: dark) {
-            .centered-heading {
-                background-color: var(--bg-color-dark);
-            }
-        }
-    </style>
-    """
-
-    st.markdown(css, unsafe_allow_html=True)
-    
-    # Display the centered heading
+    #Centered heading with background color
     st.markdown(
         """
-        <div class="centered-heading">
+        <div style='text-align: center; background-color: #f0f0f0; padding: 10px;'>
             <h1>Auto Price Prediction and Recognition Application</h1>
         </div>
         """,
@@ -139,7 +115,7 @@ def main():
     #Image Recognition Header and info
     st.sidebar.markdown(
         """
-        <div class="centered-heading">
+        <div style='text-align: center; background-color: White; padding: 10px;'>
             <h1>Auto Recognition</h1>
         </div>
         """,
@@ -188,7 +164,7 @@ def main():
     #Create input fields for user to enter car features
     st.markdown(
         """
-        <div class="centered-heading">
+        <div style='text-align: center; background-color: #f0f0f0; padding: 5px;'>
             <h1>Price Prediction</h1>
             <h1>Enter Vehicle Features:</h1>
         </div>
